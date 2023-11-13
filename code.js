@@ -27,6 +27,10 @@ createGrid()
 
 btn.addEventListener('click', () => {
     size = parseInt(prompt('Enter the size of the grid (1 - 100): '));
+    if (size < 1 || size > 100) {
+        alert('Size needs to be inside the range of (1 - 100)')
+        size = 16
+    }
     container.replaceChildren();
     createGrid()
 });
