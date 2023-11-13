@@ -24,3 +24,9 @@ function createGrid() {
 }
 
 createGrid()
+
+btn.addEventListener('click', () => {
+    size = parseInt(prompt('Enter the size of the grid (1 - 100): '));
+    container.replaceChildren();
+    createGrid()
+});
