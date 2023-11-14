@@ -14,7 +14,8 @@ body {
     margin-top: 40px;
 }
 
-.reset-btn {
+
+.btn {
     background-color: rgb(16, 69, 167);
     color: #becfca;
     font-size: 16px;
