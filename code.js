@@ -1,6 +1,7 @@
 const container = document.querySelector('.grid-container');
 const resetBtn = document.querySelector('.reset-btn')
 const randomColorBtn = document.querySelector('.random-btn')
+const darkBtn = document.querySelector('.dark-btn')
 
 let size = 16;
 
@@ -8,7 +9,8 @@ function createGrid() {
     //Loop that creates each row and append it to the container
     for (let i = 0; i < size; i++) {
         const gridRow = document.createElement('div');
-    
+        container.appendChild(gridRow);
+
         gridRow.classList.add('grid-row');
         
         //Loop that creates each column (can also be view as a celd) and append it to the row
@@ -37,12 +39,11 @@ function createGrid() {
                 gridColumn.addEventListener('mouseover', () => {
                     gridColumn.style.backgroundColor = printRandomColor();
                 })
-            
-                
             });
+
+
         }
     
-        container.appendChild(gridRow);
     }
 }
 
