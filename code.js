@@ -9,7 +9,7 @@ function createGrid() {
     //Loop that creates each row and append it to the container
     for (let i = 0; i < size; i++) {
         const gridRow = document.createElement('div');
-        container.appendChild(gridRow);
+                container.appendChild(gridRow);
 
         gridRow.classList.add('grid-row');
         
@@ -20,19 +20,15 @@ function createGrid() {
             gridRow.appendChild(gridColumn);
             
             //Add an eventList for drawing in black in each celd
-            gridColumn.addEventListener('mouseover', () => {
+            gridColumn.addEventListener('mouseover', ()=>{
                 gridColumn.style.backgroundColor = '#000';
-            });
+            })
 
             //Add an eventList for drawing in a random color when the randomColor btn is pressed
             randomColorBtn.addEventListener('click', () => {
-                const hexValues = 'abcdef0123456789';
-            
+
                 function printRandomColor() {
-                    let randomColor = '#';
-                    while (randomColor.length < 7) {
-                        randomColor += hexValues[Math.floor(Math.random() * 16)];
-                    }
+                    const randomColor = `hsl(${Math.floor(Math.random() * 361)}, 100%, 50%)`;
                     return randomColor
                 }
 
